@@ -1,9 +1,10 @@
 {
   "name": "gray-matter-from-file",
-  "version": "0.0.1",
-  "description": "Extracts only the front matter from a file stream asynchronously and passes to the well known grey-matter library for parsing. Avoids storing entire file in memory to parse front matter.",
-  "main": "index.js",
+  "version": "1.0.1",
+  "description": "Extracts only the front matter from a file stream, and passes to the well known gray-matter library for parsing.",
+  "main": "lib/index.js",
   "scripts": {
+    "prepublish": "npm run build",
     "build": "babel src --out-dir lib",
     "test": "cross-env NODE_ENV=test nyc mocha && eslint src"
   },
@@ -18,7 +19,11 @@
     "from",
     "file",
     "stream",
-    "async"
+    "async",
+    "markdown",
+    "parser",
+    "parse",
+    "stream"
   ],
   "author": "matt-rhys-jones",
   "license": "GPL-3.0",
