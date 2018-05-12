@@ -1,0 +1,52 @@
+{
+  "name": "gray-matter-from-file",
+  "version": "0.0.1",
+  "description": "Extracts only the front matter from a file stream asynchronously and passes to the well known grey-matter library for parsing. Avoids storing entire file in memory to parse front matter.",
+  "main": "index.js",
+  "scripts": {
+    "build": "babel src --out-dir lib",
+    "test": "cross-env NODE_ENV=test nyc mocha && eslint src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matt-rhys-jones/gray-matter-from-file.git"
+  },
+  "keywords": [
+    "grey",
+    "front",
+    "matter",
+    "from",
+    "file",
+    "stream",
+    "async"
+  ],
+  "author": "matt-rhys-jones",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/matt-rhys-jones/gray-matter-from-file/issues"
+  },
+  "homepage": "https://github.com/matt-rhys-jones/gray-matter-from-file#readme",
+  "dependencies": {
+    "gray-matter": "^4.0.1"
+  },
+  "devDependencies": {
+    "babel": "^6.23.0",
+    "babel-cli": "^6.26.0",
+    "babel-plugin-istanbul": "^4.1.6",
+    "babel-preset-env": "^1.7.0",
+    "babel-register": "^6.26.0",
+    "chai": "^4.1.2",
+    "cross-env": "^5.1.5",
+    "eslint": "^4.19.1",
+    "mocha": "^5.1.1",
+    "nyc": "^11.7.3",
+    "sinon": "^5.0.7"
+  },
+  "nyc": {
+    "require": [
+      "babel-register"
+    ],
+    "sourceMap": false,
+    "instrument": false
+  }
+}
