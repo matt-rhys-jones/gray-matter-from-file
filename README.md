@@ -23,7 +23,8 @@ Use Gray Matter From File to obtain this front matter, and parse it via Gray Mat
 
 ```javascript
 const path = require('path');
-const grayMatterFromFile = require('gray-matter-from-file');
+const grayMatterFromFile = require('gray-matter-from-file').default;
+// import grayMatterFromFile from 'gray-matter-from-file';
 
 const filepath = path.resolve(__dirname, 'my-file.md');
 
