@@ -4,10 +4,6 @@ Reads the front matter portion of a markdown file (denoted by `---` above and be
 
 This *only* reads the front matter of a file and does not load the remaining contents into memory, this results in fast and asynchronous parsing.
 
-## Use Case
-
-With this small library you can parse the front matter of a markdown file on disk without having to load the entire file into memory (wasteful when you only need the first few lines), or writing your own asynchronous implementation.
-
 ## Usage
 A Markdown file with some front matter and contents underneath.
 
@@ -32,3 +28,17 @@ grayMatterFromFile(filepath)
     .then(grayMatter => console.log(grayMatter)) // { hello: 'world' }
     .catch(error => console.log(error))
 ```
+
+## Why Use It
+
+This module uses fs.fileRead and readline to stream the front matter from a file line by line.
+
+This ensures that:
+
+- There are no synchronous file reads to obtain the front matter
+- Only the front matter is ever read into memory, the rest of the file is ignored
+- This should be performant for a large number of front matter reads across many files, perhaps useful for indexing or processing a large set of markdown files in a static site generator
+
+## Support
+
+This has only been transpiled for Node 8 (and above) in order to help enourage the community to be on the latest, more secure and more performant versions of Node. I may remove support for Node 8 when it is no longer LTS.
