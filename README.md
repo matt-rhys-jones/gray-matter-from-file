@@ -1,5 +1,7 @@
 # Gray Matter From File
 
+[![Build Status](https://travis-ci.org/matt-rhys-jones/gray-matter-from-file.svg?branch=master)](https://travis-ci.org/matt-rhys-jones/gray-matter-from-file)
+
 Reads the front matter portion of a markdown file (denoted by `---` above and below the front matter contents) and passes this to [Gray Matter](https://www.npmjs.com/package/gray-matter) for parsing.
 
 This *only* reads the front matter of a file and does not load the remaining contents into memory, this results in fast and asynchronous parsing.
