@@ -1,6 +1,6 @@
 {
   "name": "gray-matter-from-file",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Extracts only the front matter from a file stream, and passes to the well known gray-matter library for parsing.",
   "main": "lib/index.js",
   "scripts": {
