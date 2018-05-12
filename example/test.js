@@ -1,5 +1,5 @@
 const path = require('path');
-const grayMatterFromFile = require('gray-matter-from-file');
+const grayMatterFromFile = require('gray-matter-from-file').default;
 
 const filepath = path.resolve(__dirname, 'my-file.md');
 
