@@ -15,7 +15,7 @@ hello: world
 The remaining contents of this markdown file would be ignored, this module simply retrieves the front matter above.
 ```
 
-Use Gray Matter From File to obtain this front matter, and parse it via Gray Matter
+Use grayMatterFromFile to obtain this front matter, and parse it via the gray-matter module.
 
 ```javascript
 const path = require('path');
@@ -31,7 +31,7 @@ grayMatterFromFile(filepath)
 
 ## Why Use It
 
-This module uses fs.fileRead and readline to stream the front matter from a file line by line.
+This module uses `fs.readFile` and `readline` to stream the front matter from a markdown file line by line, before passing the result to [Gray Matter](https://www.npmjs.com/package/gray-matter) and returning the parsed object.
 
 This ensures that:
 
